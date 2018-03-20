@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'categories.apps.CategoriesConfig',
     'core.apps.CoreConfig',
-    'categories.apps.CategoriesConfig'
+    'questions.apps.QuestionsConfig',
+    'likes.apps.LikesConfig',
+    'answers.apps.AnswersConfig',
 ]
 
 AUTH_USER_MODEL = 'core.User'

@@ -1,0 +1,14 @@
+{% extends "categories/base_categories.html" %}
+
+{#{% block title %}Category {{ category.name }}{% endblock %}#}
+
+{% block content %}
+    <a href="{% url "categories:categories_list" %}">All categories</a>
+    {% include "categories/widgets/category_title.html" with name=category.name %}
+    <div>
+        {% for question in category.questions.all %}
+            <div>{{ question }}</div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
